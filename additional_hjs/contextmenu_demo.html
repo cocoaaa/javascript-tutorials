@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Another example: contextmenu</h1>
+        <p>Contextmenu allows to add customized menu list (for example, when you click on the webpage). </p>
+        <p>Note: Only <em><span style="color: red">FireFox</span></em> supports this feature for now. Please use Firefox to see how this demo works!
+        </p>
+        
+        <menu type="context" id="pages-menu">
+            <menu label="other pages">
+                <menuitem label="stellar" onclick="window.open('https://stellar.mit.edu/S/course/1/sp16/1.00')"></menuitem>
+                <menuitem label="facebook" onclick="window.open('http://www.facebook.com')"></menuitem>
+                <menuitem label="google" onclick="window.open('http://www.google.com')"></menuitem>
+            </menu>
+        </menu>
+
+        <menu type="context" id="color-menu" >
+            <menu label="color">
+                <menuitem label="blue" id="blue"></menuitem>
+                <menuitem label="yellow" onclick="beYellow()"></menuitem>
+                <menuitem label="default" onclick="beDefault()"></menuitem>
+            </menu>
+        </menu>
+    
+
+        <div id="container-contextmenu" style="border: solid 5px; width: 600px; height: auto" contextmenu="pages-menu" >
+            <p>Right-click on this container to see a menu to go to other websites.</p>
+            
+            <p id="line-contextmenu" style="font-family: Impact;" contextmenu="color-menu">You can choose the color of this line by right-clicking -> color from the menu.</p>
+
+            <p> Double-click on the image to make it disapper/reappear!</p>
+            <img id="img-contextmenu" src="0.png"/>
+        </div>
+
+    <script src="contextmenu_demo.js"></script>
+    </body>
+
+
+</html>
